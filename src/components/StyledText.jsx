@@ -20,10 +20,13 @@ const styles = StyleSheet.create({
     },
     colorSecondary: {
         color: theme.colors.textSecondary
+    },
+    TextAlignCenter: {
+        textAlign: theme.AlignItems.center
     }
 });
 
-export function StyledText({children, color, fontSize, fontWeight, 
+export function StyledText({align,children, color, fontSize, fontWeight, 
     style, ...restOfProps}) {
     const textStyles = [ 
         styles.text,
@@ -31,6 +34,7 @@ export function StyledText({children, color, fontSize, fontWeight,
         color == 'secondary' && styles.colorSecondary,
         fontSize == 'subheading' && styles.subHeading,
         fontWeight == 'bold' && styles.bold,
+        align == 'center' && styles.TextAlignCenter
     ];
 
     return (

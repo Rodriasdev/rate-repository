@@ -1,6 +1,7 @@
 import React from "react"
 import { View, StyleSheet } from "react-native"
 import { StyledText } from "./StyledText.jsx"
+import { RepositoryStats } from "./RepositoryStats.jsx"
 
 export const RepositoryItems = (repo) => {
     return (
@@ -8,13 +9,10 @@ export const RepositoryItems = (repo) => {
             <StyledText fontSize='subheading' fontWeight='bold'>{repo.login}</StyledText>
             <StyledText>Biography: {repo.bio == null ? "sin biography" : repo.bio}</StyledText>
             <StyledText>Repositories publics:{repo.public_repos}</StyledText>
-            <StyledText>Lenguage:{repo.lenguage}</StyledText>
             <StyledText>Followers: {repo.followers}</StyledText>
             <StyledText>Followings: {repo.following}</StyledText>
-            <StyledText>Stars:{repo.stars}</StyledText>
-            <StyledText>Review:{repo.reviewCount}</StyledText>
             <StyledText>Location: {repo.location  == null ? "sin location" : repo.location}</StyledText>
-            <StyledText>Rating:{repo.rating}</StyledText>
+            <RepositoryStats {...repo}/>
         </View>
     )
 }
