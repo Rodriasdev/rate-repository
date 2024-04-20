@@ -34,7 +34,8 @@ export function StyledText({align,children, color, fontSize, fontWeight,
         color == 'secondary' && styles.colorSecondary,
         fontSize == 'subheading' && styles.subHeading,
         fontWeight == 'bold' && styles.bold,
-        align == 'center' && styles.TextAlignCenter
+        align == 'center' && styles.TextAlignCenter,
+        style
     ];
 
     return (

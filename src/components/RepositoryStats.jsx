@@ -23,8 +23,8 @@ export const RepositoryStats = repo => {
                 <StyledText align='center' >{repo.reviewCount}</StyledText>
             </View>
             <View>
-                <StyledText align='center' fontWeight='bold'>Lenguage:</StyledText>
-                <StyledText align='center' >{repo.lenguage}</StyledText>
+                <StyledText align='center' fontWeight='bold'>Followers:</StyledText>
+                <StyledText align='center' fontWeight='bold'>{repo.followers}</StyledText>
             </View>
         </View>
     )
