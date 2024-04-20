@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     container: {
         padding: 20,
         paddingBottom: 5,
-        paddingTop: 5
+        paddingTop: 5,
     },
     strong: {
         color: 'skyblue',

@@ -29,9 +29,8 @@ export function StyledText({children, color, fontSize, fontWeight,
         styles.text,
         color == 'primary' && styles.colorPrimary,
         color == 'secondary' && styles.colorSecondary,
-        color == 'subheading' && styles.subHeading,
-        color == 'bold' && styles.bold,
-
+        fontSize == 'subheading' && styles.subHeading,
+        fontWeight == 'bold' && styles.bold,
     ];
 
     return (
