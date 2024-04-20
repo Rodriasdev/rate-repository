@@ -4,8 +4,6 @@ import repositories from "../data/repositories.js";
 import { RepositoryItems } from "./RepositoryItems.jsx";
 export const RepositoryList = () => {
 
-
-console.log(repositories);
     return(
         <FlatList
             data={repositories}
