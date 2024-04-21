@@ -1,9 +1,8 @@
 import React from "react";
 import {View, StyleSheet, ScrollView} from 'react-native'
-import { StyledText } from "./StyledText.jsx";
 import Constants from 'expo-constants'
 import { theme } from "./theme.js";
-import {Link, useLocation} from 'react-router-native'
+import { AppBarTab } from "./AppBarTab.jsx";
 
 const styles = StyleSheet.create({
     container: {
@@ -24,30 +23,15 @@ const styles = StyleSheet.create({
     }
 })
 
-const AppBarTab = ({active, children, to}) => {
-    const textStyles = [
-        styles.text,
-        !active && styles.active
-    ]
 
-    return (
-
-            <Link to={to}>
-                <StyledText  fontWeight='bold' style={textStyles}>
-                    {children}
-                </StyledText>
-            </Link>
-
-    )
-}
 
 export const AppBar = () => {
-    const { pathname } = useLocation()
+
     return (
         <View style={styles.container} >
             <ScrollView horizontal style={styles.scroll}>
-                <AppBarTab active={pathname === '/'} to='/'>Repositories</AppBarTab>
-                <AppBarTab active={pathname === '/signin'} to='/signin'>Sig In</AppBarTab>
+                <AppBarTab styles={styles} to='/'>Repositories</AppBarTab>
+                <AppBarTab styles={styles} to='/signin'>Sig In</AppBarTab>
             </ScrollView>
         </View>
     )
