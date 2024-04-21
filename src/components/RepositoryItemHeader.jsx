@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
         backgroundColor: Platform.select({
             android: 'red',
             ios: 'blue',
-            default: 'white'
+            default: 'black'
         }),
         alignSelf: 'flex-start',
         borderRadius: 4,
