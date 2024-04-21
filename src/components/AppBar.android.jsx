@@ -6,7 +6,7 @@ import { AppBarTab } from "./AppBarTab.jsx";
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: 'red',
+        backgroundColor: theme.appBar.primary,
         paddingTop: Constants.statusBarHeight + 10,
         flexDirection: 'row',
         textAlign: 'center'
@@ -35,6 +35,6 @@ const AppBar = () => {
             </ScrollView>
         </View>
     )
-}
+};
 
 export default AppBar

@@ -1,4 +1,4 @@
-import { StyleSheet, View,Image } from "react-native"
+import { StyleSheet, View,Image, Platform } from "react-native"
 import { StyledText } from "./StyledText.jsx"
 import { theme } from "./theme.js"
  
@@ -23,7 +23,11 @@ const styles = StyleSheet.create({
     Language: {
         padding: 4,
         color: theme.colors.white,
-        backgroundColor: theme.colors.primary,
+        backgroundColor: Platform.select({
+            android: 'red',
+            ios: 'blue',
+            default: 'white'
+        }),
         alignSelf: 'flex-start',
         borderRadius: 4,
         overflow: 'hidden',
