@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     }
 });
 
-export const StyledTextInput = ({style = {},children, ...props}) => {
+export const StyledTextInput = ({style = {}, ...props}) => {
 
     const inputStyle = {
         ...styles.textInput,
@@ -20,8 +20,6 @@ export const StyledTextInput = ({style = {},children, ...props}) => {
     }
 
     return (
-        <TextInput style={inputStyle} {...props}>
-            {children}
-        </TextInput>
+        <TextInput style={inputStyle} {...props}/>
     )
 }
